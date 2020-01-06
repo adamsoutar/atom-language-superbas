@@ -1,0 +1,17 @@
+{
+  "name": "language-superbas",
+  "version": "0.1.0",
+  "description": "SuperBAS language package for Atom",
+  "keywords": [
+    "language",
+    "grammar"
+  ],
+  "repository": "https://github.com/adamsoutar/atom-language-superbas",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "devDependencies": {
+    "cson": "^6.9.0"
+  }
+}

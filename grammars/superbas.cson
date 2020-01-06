@@ -1,0 +1,106 @@
+$schema: 'https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json'
+name: 'SuperBAS'
+patterns: [
+	{
+		include: '#commands'
+	}
+	{
+		include: '#keywords'
+	}
+	{
+		include: '#strings'
+	}
+	{
+		include: '#operators'
+	}
+	{
+		include: '#numbers'
+	}
+	{
+		include: '#compilerKeywords'
+	}
+	{
+		include: '#stdLib'
+	}
+	{
+		include: '#comments'
+	}
+	{
+		include: '#vars'
+	}
+	{
+		include: '#punctuation'
+	}
+]
+repository:
+	commands:
+		patterns: [
+			{
+				name: 'keyword.control.superbas'
+				match: '(?i)\\b(print|if|let|goto|gosub|return|cls|for|next|topof|dim|list|listadd|listrm|printat|ink|paper|sleep|waitkey|exit|stop|input|writefile|appendfile|def)\\b'
+			}
+		]
+	keywords:
+		patterns: [
+			{
+				name: 'keyword.control.superbas'
+				match: '(?i)\\b(then|else|to|step)\\b'
+			}
+		]
+	strings:
+		name: 'string.quoted.double.superbas'
+		begin: '"'
+		end: '"'
+		patterns: [
+			{
+				name: 'constant.character.escape.superbas'
+				match: '\\\\.'
+			}
+		]
+	operators:
+		patterns: [
+			{
+				name: 'keyword.operator'
+				match: '(?i)(and|or|mod|not|\\+|-|\\*|/|&&|\\|\\||%|=|<=|>=|!=|!|<>|<|>)'
+			}
+		]
+	numbers:
+		patterns: [
+			{
+				name: 'constant.numeric'
+				match: '[0-9]*\\.?[0-9]+'
+			}
+		]
+	compilerKeywords:
+		patterns: [
+			{
+				name: 'keyword.control.compiler.superbas'
+				match: '(?i)^#(include)'
+			}
+		]
+	stdLib:
+		patterns: [
+			{
+				name: 'variable.language'
+				match: '(?i)\\b(((val|len|sin|cos|tan|floor|int|ceil|round|random)\\b)|(str\\$|readfile\\$|split\\$|join\\$))'
+			}
+		]
+	comments:
+		name: 'comment.line.character.superbas'
+		begin: '(?i)rem'
+		end: '$'
+	punctuation:
+		patterns: [
+			{
+				name: 'punctuation.superbas'
+				match: ':|,'
+			}
+		]
+	vars:
+		patterns: [
+			{
+				name: 'variable.other'
+				match: '(?i)([a-z]+[0-9]*)+\\$?'
+			}
+		]
+scopeName: 'source.superbas'
