@@ -104,3 +104,6 @@ repository:
 			}
 		]
 scopeName: 'source.superbas'
+fileTypes: [
+  'sbas'
+]

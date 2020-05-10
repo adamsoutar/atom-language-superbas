@@ -10,7 +10,7 @@ cd atom-language-superbas
 apm link
 ```
 
-language-superbas doesn't take over as the grammar for any file types, though '.sbas' is the recommended. For now, you can click the `Plain Text` button in the status bar and select `SuperBAS` to switch the current editor.
+language-superbas uses the `.sbas` extension by default.
 
 ----
 
